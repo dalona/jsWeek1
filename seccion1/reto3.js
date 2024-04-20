@@ -46,3 +46,14 @@ console.log(itemsList)
 }
 
 
+function getCheapestProduct() {
+    const theCheapest = itemsList.reduce((acc,extraItem ) => {
+        if (extraItem.itemPrice < acc) {
+            acc = extraItem.itemPrice;
+        }
+        return acc;
+    }, 100000);
+    return theCheapest;
+}
+
+console.log(getCheapestProduct(itemsList.extraItem));
